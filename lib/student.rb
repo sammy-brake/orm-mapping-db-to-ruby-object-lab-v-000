@@ -101,7 +101,7 @@ class Student
     SQL
 
       self.new_from_db(DB[:conn].execute(sql))
-binding.pry 
+binding.pry
   end
 
   def all_students_in_grade_X(grade)
