@@ -99,9 +99,9 @@ class Student
     WHERE grade = 10
     LIMIT 1
     SQL
-    
+
       self.new_from_db(DB[:conn].execute(sql))
-    
+
   end
 
   def all_students_in_grade_X(grade)
