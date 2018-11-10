@@ -99,8 +99,8 @@ class Student
     WHERE grade = 10
     LIMIT 1
     SQL
-
-      self.new_from_db(DB[:conn].execute(sql))
+      row = DB[:conn].execute(sql).flatten
+      self.new_from_db(row)
 binding.pry
   end
 
