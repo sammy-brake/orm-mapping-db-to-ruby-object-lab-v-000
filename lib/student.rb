@@ -102,10 +102,10 @@ class Student
       self.new_from_db(DB[:conn].execute(sql).flatten)
   end
 
-  def all_students_in_grade_X(grade)
+  def self.all_students_in_grade_X(grade)
     sql = <<-SQL
     SELECT *
-    FROM students
+    FROM students 
     WHERE grade = ?
     SQL
     DB[:conn].execute(sql, grade)
