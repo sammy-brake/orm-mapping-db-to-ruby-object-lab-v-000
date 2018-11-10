@@ -100,9 +100,7 @@ class Student
     LIMIT 1
     SQL
       row = DB[:conn].execute(sql).flatten
-      marco = self.new_from_db(row)
-
-
+      self.new_from_db(row)
   end
 
   def all_students_in_grade_X(grade)
