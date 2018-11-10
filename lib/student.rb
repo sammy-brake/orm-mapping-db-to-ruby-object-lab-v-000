@@ -101,7 +101,7 @@ class Student
     SQL
       row = DB[:conn].execute(sql).flatten
       marco = self.new_from_db(row)
-      marco
+      
 
   end
 
